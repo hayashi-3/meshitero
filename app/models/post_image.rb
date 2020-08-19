@@ -1,17 +1,7 @@
 class PostImage < ApplicationRecord
 
-  blongs_to  :user
-
-def new
-  end
-
-  def create
-  end
-
-  def index
-  end
-
-  def show
-  end
+  belongs_to  :user
+  attachment :image
+  has_many  :post_comments,  dependent:  :destroy
 
 end
